@@ -50,147 +50,149 @@ if selected == "Panjang":
   satuan2 = st.selectbox("Ke Satuan :",["Sentimeter","Meter","Kilometer","Hektometer","Dekameter","Desimeter","Inci","Milimeter"])
   konversi = st.button("Konversi")
 
-  if konversi:
-    # Konversi Satuan Panjang
+  def konversi_panjang(panjang, satuan1, satuan2):
     if satuan1 == "Sentimeter":
       if satuan2 == "Meter":
-        hasil = panjang / 100
+        return panjang / 100
       elif satuan2 == "Kilometer":
-        hasil = panjang / 100000
+        return panjang / 100000
       elif satuan2 == "Inci":
-        hasil = panjang / 2.54
+        return panjang / 2.54
       elif satuan2 == "Hektometer":
-        hasil = panjang / 10000
+        return panjang / 10000
       elif satuan2 == "Dekameter":
-        hasil = panjang / 1000
+        return panjang / 1000
       elif satuan2 == "Desimeter":
-        hasil = panjang / 10
+        return panjang / 10
       elif satuan2 == "Milimeter":
-        hasil = panjang / 10
+        return panjang / 10
       else:
-        hasil = None
+        return None
     elif satuan1 == "Meter":
       if satuan2 == "Sentimeter":
-        hasil = panjang * 100
+        return panjang * 100
       elif satuan2 == "Kilometer":
-        hasil = panjang / 1000
+        return panjang / 1000
       elif satuan2 == "Inci":
-        hasil = panjang * 39.37
+        return panjang * 39.37
       elif satuan2 == "Hektometer":
-        hasil = panjang / 10
+        return panjang / 10
       elif satuan2 == "Dekameter":
-        hasil = panjang / 10
+        return panjang / 10
       elif satuan2 == "Desimeter":
-        hasil = panjang / 10
+        return panjang / 10
       elif satuan2 == "Milimeter":
-        hasil = panjang * 1000
+        return panjang * 1000
       else:
-        hasil = None
+        return None
     elif satuan1 == "Kilometer":
       if satuan2 == "Sentimeter":
-        hasil = panjang * 100000
+        return panjang * 100000
       elif satuan2 == "Meter":
-        hasil = panjang * 1000
+        return panjang * 1000
       elif satuan2 == "Inci":
-        hasil = panjang * 39370
+        return panjang * 39370
       elif satuan2 == "Hektometer":
-        hasil = panjang * 10
+        return panjang * 10
       elif satuan2 == "Dekameter":
-        hasil = panjang * 100
+        return panjang * 100
       elif satuan2 == "Desimeter":
-        hasil = panjang * 10
+        return panjang * 10
       elif satuan2 == "Milimeter":
-        hasil = panjang * 1000000
+        return panjang * 1000000
       else:
-        hasil = None
+        return None
     elif satuan1 == "Inci":
       if satuan2 == "Sentimeter":
-        hasil = panjang * 2.54
+        return panjang * 2.54
       elif satuan2 == "Meter":
-        hasil = panjang / 39.37
+        return panjang / 39.37
       elif satuan2 == "Kilometer":
-        hasil = panjang / 39370
+        return panjang / 39370
       elif satuan2 == "Hektometer":
-        hasil = panjang / 393.7
+        return panjang / 393.7
       elif satuan2 == "Dekameter":
-        hasil = panjang / 39.37
+        return panjang / 39.37
       elif satuan2 == "Desimeter":
-        hasil = panjang / 3.937
+        return panjang / 3.937
       elif satuan2 == "Milimeter":
-        hasil = panjang * 25.4
+        return panjang * 25.4
       else:
-        hasil = None
+        return None
     elif satuan1 == "Hektometer":
       if satuan2 == "Sentimeter":
-        hasil = panjang * 10000
+        return panjang * 10000
       elif satuan2 == "Meter":
-        hasil = panjang * 100
+        return panjang * 100
       elif satuan2 == "Kilometer":
-        hasil = panjang / 10
+        return panjang / 10
       elif satuan2 == "Inci":
-        hasil = panjang * 393.7
+        return panjang * 393.7
       elif satuan2 == "Dekameter":
-        hasil = panjang * 10
+        return panjang * 10
       elif satuan2 == "Desimeter":
-        hasil = panjang * 10
+        return panjang * 10
       elif satuan2 == "Milimeter":
-        hasil = panjang * 10000
+        return panjang * 10000
       else:
-        hasil = None
+        return None
     elif satuan1 == "Dekameter":
       if satuan2 == "Sentimeter":
-        hasil = panjang * 1000
+        return panjang * 1000
       elif satuan2 == "Meter":
-        hasil = panjang * 10
+        return panjang * 10
       elif satuan2 == "Kilometer":
-        hasil = panjang / 100
+        return panjang / 100
       elif satuan2 == "Inci":
-        hasil = panjang * 39.37
+        return panjang * 39.37
       elif satuan2 == "Hektometer":
-        hasil = panjang / 10
+        return panjang / 10
       elif satuan2 == "Desimeter":
-        hasil = panjang / 10
+        return panjang / 10
       elif satuan2 == "Milimeter":
-        hasil = panjang * 1000
+        return panjang * 1000
       else:
-        hasil = None
+        return None
     elif satuan1 == "Desimeter":
       if satuan2 == "Sentimeter":
-        hasil = panjang * 10
+        return panjang * 10
       elif satuan2 == "Meter":
-        hasil = panjang / 10
+        return panjang / 10
       elif satuan2 == "Kilometer":
-        hasil = panjang / 10000
+        return panjang / 10000
       elif satuan2 == "Inci":
-        hasil = panjang * 3.937
+        return panjang * 3.937
       elif satuan2 == "Hektometer":
-        hasil = panjang / 100
+        return panjang / 100
       elif satuan2 == "Dekameter":
-        hasil = panjang / 10
+        return panjang / 10
       elif satuan2 == "Milimeter":
-        hasil = panjang * 10
+        return panjang * 10
       else:
-        hasil = None
+        return None
     elif satuan1 == "Milimeter":
       if satuan2 == "Sentimeter":
-        hasil = panjang * 10
+        return panjang * 10
       elif satuan2 == "Meter":
-        hasil = panjang / 1000
+        return panjang / 1000
       elif satuan2 == "Kilometer":
-        hasil = panjang / 1000000
+        return panjang / 1000000
       elif satuan2 == "Inci":
-        hasil = panjang / 25.4
+        return panjang / 25.4
       elif satuan2 == "Hektometer":
-        hasil = panjang / 10000
+        return panjang / 10000
       elif satuan2 == "Dekameter":
-        hasil = panjang / 1000
+        return panjang / 1000
       elif satuan2 == "Desimeter":
-        hasil = panjang / 10
+        return panjang / 10
       else:
-        hasil = None
+        return None
     else:
-      hasil = None
+      return None
 
+
+  if konversi:
+    hasil = konversi_panjang(panjang, satuan1, satuan2)
     if hasil is not None:
       st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
     else:
