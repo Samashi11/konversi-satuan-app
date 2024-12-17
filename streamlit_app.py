@@ -99,6 +99,12 @@ if selected == "Panjang":
     elif satuan1 == "Dekameter" and satuan2 == "Kilometer":
       hasil = panjang / 100
       st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
+    elif satuan1 == "Desimeter" and satuan2 == "Meter":
+      hasil = panjang * 10
+      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
+    elif satuan1 == "Desimeter" and satuan2 == "Kilometer":
+      hasil = panjang / 100
+      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
     elif satuan1 == "Milimeter" and satuan2 == "Meter":
       hasil = panjang / 1000
       st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
@@ -107,6 +113,7 @@ if selected == "Panjang":
       st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
     else:
       st.write("Hasil Konversi Tidak Valid")
+
 
 
 
