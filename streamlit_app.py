@@ -46,8 +46,8 @@ if selected == "Panjang":
   st.image("https://www.wahanaedukasi.latifaba.com/public/uploads/blog/blog_240201090159_satuan-panjang-adalah-tangga-satuan-cara-hitung-dan-contoh-soal.png", width=400)
 
   panjang = st.number_input("Masukkan Panjang :",0)
-  satuan1 = st.selectbox("Dari Satuan :",["Sentimeter","Meter","Kilometer","Inci"])
-  satuan2 = st.selectbox("Ke Satuan :",["Sentimeter","Meter","Kilometer","Inci"])
+  satuan1 = st.selectbox("Dari Satuan :",["Sentimeter","Meter","Kilometer","Hektometer","Dekameter","Inci","Milimeter"])
+  satuan2 = st.selectbox("Ke Satuan :",["Sentimeter","Meter","Kilometer","Hektometer","Dekameter","Inci","Milimeter"])
   konversi = st.button("Konversi")
 
   if konversi:
@@ -87,8 +87,27 @@ if selected == "Panjang":
     elif satuan1 == "Meter" and satuan2 == "Sentimeter":
       hasil = panjang * 100
       st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
+    elif satuan1 == "Hektometer" and satuan2 == "Meter":
+      hasil = panjang * 100
+      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
+    elif satuan1 == "Hektometer" and satuan2 == "Kilometer":
+      hasil = panjang / 10
+      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
+    elif satuan1 == "Dekameter" and satuan2 == "Meter":
+      hasil = panjang * 10
+      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
+    elif satuan1 == "Dekameter" and satuan2 == "Kilometer":
+      hasil = panjang / 100
+      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
+    elif satuan1 == "Milimeter" and satuan2 == "Meter":
+      hasil = panjang / 1000
+      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
+    elif satuan1 == "Milimeter" and satuan2 == "Kilometer":
+      hasil = panjang / 1000000
+      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
     else:
       st.write("Hasil Konversi Tidak Valid")
+
 
 
 
