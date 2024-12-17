@@ -45,7 +45,7 @@ if selected == "Panjang":
 
   st.image("https://www.wahanaedukasi.latifaba.com/public/uploads/blog/blog_240201090159_satuan-panjang-adalah-tangga-satuan-cara-hitung-dan-contoh-soal.png", width=400)
 
-  panjang = st.number_input("Masukkan Panjang :",0)
+  panjang = st.number_input("Masukkan Panjang :",value=0,format="%.0f")
   satuan1 = st.selectbox("Dari Satuan :",["Sentimeter","Meter","Kilometer","Hektometer","Dekameter","Desimeter","Inci","Milimeter"])
   satuan2 = st.selectbox("Ke Satuan :",["Sentimeter","Meter","Kilometer","Hektometer","Dekameter","Desimeter","Inci","Milimeter"])
   konversi = st.button("Konversi")
