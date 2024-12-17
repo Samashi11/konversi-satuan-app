@@ -45,71 +45,153 @@ if selected == "Panjang":
 
   st.image("https://www.wahanaedukasi.latifaba.com/public/uploads/blog/blog_240201090159_satuan-panjang-adalah-tangga-satuan-cara-hitung-dan-contoh-soal.png", width=400)
 
-  panjang = st.number_input("Masukkan Panjang :",value=0,format="%.0f")
+  panjang = st.number_input("Masukkan Panjang :",0)
   satuan1 = st.selectbox("Dari Satuan :",["Sentimeter","Meter","Kilometer","Hektometer","Dekameter","Desimeter","Inci","Milimeter"])
   satuan2 = st.selectbox("Ke Satuan :",["Sentimeter","Meter","Kilometer","Hektometer","Dekameter","Desimeter","Inci","Milimeter"])
   konversi = st.button("Konversi")
 
   if konversi:
-    if satuan1 == "Meter" and satuan2 == "Kilometer":
-      hasil = panjang / 1000
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Meter" and satuan2 == "Inci":
-      hasil = panjang * 39.37
-      st.write("Hasil Konversi : ",f"**{hasil}**", satuan2)
-    elif satuan1 == "Kilometer" and satuan2 == "Meter":
-      hasil = panjang * 1000
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Kilometer" and satuan2 == "Inci":
-      hasil = panjang * 39370
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Inci" and satuan2 == "Meter":
-      hasil = panjang / 39.37
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Inci" and satuan2 == "Kilometer":
-      hasil = panjang / 39370
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Sentimeter" and satuan2 == "Meter":
-      hasil = panjang / 100
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Sentimeter" and satuan2 == "Kilometer":
-      hasil = panjang / 100000
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Sentimeter" and satuan2 == "Inci":
-      hasil = panjang / 2.54
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Inci" and satuan2 == "Sentimeter":
-      hasil = panjang * 2.54
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Kilometer" and satuan2 == "Sentimeter":
-      hasil = panjang * 100000
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Meter" and satuan2 == "Sentimeter":
-      hasil = panjang * 100
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Hektometer" and satuan2 == "Meter":
-      hasil = panjang * 100
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Hektometer" and satuan2 == "Kilometer":
-      hasil = panjang / 10
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Dekameter" and satuan2 == "Meter":
-      hasil = panjang * 10
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Dekameter" and satuan2 == "Kilometer":
-      hasil = panjang / 100
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Desimeter" and satuan2 == "Meter":
-      hasil = panjang * 10
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Desimeter" and satuan2 == "Kilometer":
-      hasil = panjang / 100
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Milimeter" and satuan2 == "Meter":
-      hasil = panjang / 1000
-      st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
-    elif satuan1 == "Milimeter" and satuan2 == "Kilometer":
-      hasil = panjang / 1000000
+    # Konversi Satuan Panjang
+    if satuan1 == "Sentimeter":
+      if satuan2 == "Meter":
+        hasil = panjang / 100
+      elif satuan2 == "Kilometer":
+        hasil = panjang / 100000
+      elif satuan2 == "Inci":
+        hasil = panjang / 2.54
+      elif satuan2 == "Hektometer":
+        hasil = panjang / 10000
+      elif satuan2 == "Dekameter":
+        hasil = panjang / 1000
+      elif satuan2 == "Desimeter":
+        hasil = panjang / 10
+      elif satuan2 == "Milimeter":
+        hasil = panjang / 10
+      else:
+        hasil = None
+    elif satuan1 == "Meter":
+      if satuan2 == "Sentimeter":
+        hasil = panjang * 100
+      elif satuan2 == "Kilometer":
+        hasil = panjang / 1000
+      elif satuan2 == "Inci":
+        hasil = panjang * 39.37
+      elif satuan2 == "Hektometer":
+        hasil = panjang / 10
+      elif satuan2 == "Dekameter":
+        hasil = panjang / 10
+      elif satuan2 == "Desimeter":
+        hasil = panjang / 10
+      elif satuan2 == "Milimeter":
+        hasil = panjang * 1000
+      else:
+        hasil = None
+    elif satuan1 == "Kilometer":
+      if satuan2 == "Sentimeter":
+        hasil = panjang * 100000
+      elif satuan2 == "Meter":
+        hasil = panjang * 1000
+      elif satuan2 == "Inci":
+        hasil = panjang * 39370
+      elif satuan2 == "Hektometer":
+        hasil = panjang * 10
+      elif satuan2 == "Dekameter":
+        hasil = panjang * 100
+      elif satuan2 == "Desimeter":
+        hasil = panjang * 10
+      elif satuan2 == "Milimeter":
+        hasil = panjang * 1000000
+      else:
+        hasil = None
+    elif satuan1 == "Inci":
+      if satuan2 == "Sentimeter":
+        hasil = panjang * 2.54
+      elif satuan2 == "Meter":
+        hasil = panjang / 39.37
+      elif satuan2 == "Kilometer":
+        hasil = panjang / 39370
+      elif satuan2 == "Hektometer":
+        hasil = panjang / 393.7
+      elif satuan2 == "Dekameter":
+        hasil = panjang / 39.37
+      elif satuan2 == "Desimeter":
+        hasil = panjang / 3.937
+      elif satuan2 == "Milimeter":
+        hasil = panjang * 25.4
+      else:
+        hasil = None
+    elif satuan1 == "Hektometer":
+      if satuan2 == "Sentimeter":
+        hasil = panjang * 10000
+      elif satuan2 == "Meter":
+        hasil = panjang * 100
+      elif satuan2 == "Kilometer":
+        hasil = panjang / 10
+      elif satuan2 == "Inci":
+        hasil = panjang * 393.7
+      elif satuan2 == "Dekameter":
+        hasil = panjang * 10
+      elif satuan2 == "Desimeter":
+        hasil = panjang * 10
+      elif satuan2 == "Milimeter":
+        hasil = panjang * 10000
+      else:
+        hasil = None
+    elif satuan1 == "Dekameter":
+      if satuan2 == "Sentimeter":
+        hasil = panjang * 1000
+      elif satuan2 == "Meter":
+        hasil = panjang * 10
+      elif satuan2 == "Kilometer":
+        hasil = panjang / 100
+      elif satuan2 == "Inci":
+        hasil = panjang * 39.37
+      elif satuan2 == "Hektometer":
+        hasil = panjang / 10
+      elif satuan2 == "Desimeter":
+        hasil = panjang / 10
+      elif satuan2 == "Milimeter":
+        hasil = panjang * 1000
+      else:
+        hasil = None
+    elif satuan1 == "Desimeter":
+      if satuan2 == "Sentimeter":
+        hasil = panjang * 10
+      elif satuan2 == "Meter":
+        hasil = panjang / 10
+      elif satuan2 == "Kilometer":
+        hasil = panjang / 10000
+      elif satuan2 == "Inci":
+        hasil = panjang * 3.937
+      elif satuan2 == "Hektometer":
+        hasil = panjang / 100
+      elif satuan2 == "Dekameter":
+        hasil = panjang / 10
+      elif satuan2 == "Milimeter":
+        hasil = panjang * 10
+      else:
+        hasil = None
+    elif satuan1 == "Milimeter":
+      if satuan2 == "Sentimeter":
+        hasil = panjang * 10
+      elif satuan2 == "Meter":
+        hasil = panjang / 1000
+      elif satuan2 == "Kilometer":
+        hasil = panjang / 1000000
+      elif satuan2 == "Inci":
+        hasil = panjang / 25.4
+      elif satuan2 == "Hektometer":
+        hasil = panjang / 10000
+      elif satuan2 == "Dekameter":
+        hasil = panjang / 1000
+      elif satuan2 == "Desimeter":
+        hasil = panjang / 10
+      else:
+        hasil = None
+    else:
+      hasil = None
+
+    if hasil is not None:
       st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
     else:
       st.write("Hasil Konversi Tidak Valid")
