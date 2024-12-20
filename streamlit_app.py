@@ -73,21 +73,55 @@ if selected == "Panjang":
   konversi = st.button("Konversi")
 
   def konversi_panjang(panjang, satuan1, satuan2):
-    if satuan1 == "Sentimeter":
-      if satuan2 == "Kilometer":
-        return panjang / 100000
-      elif satuan2 == "Hektometer":
-        return panjang / 10000
-      elif satuan2 == "Dekameter":
-        return panjang / 1000
-      elif satuan2 == "Meter":
-        return panjang / 100
-      elif satuan2 == "Desimeter":
-        return panjang / 10
-      elif satuan2 == "Milimeter":
+    if satuan1 == "Kilometer":
+      if satuan2 == "Hektometer":
         return panjang * 10
+      elif satuan2 == "Dekameter":
+        return panjang * 100
+      elif satuan2 == "Meter":
+        return panjang * 1000
+      elif satuan2 == "Desimeter":
+        return panjang * 10000
+      elif satuan2 == "Sentimeter":
+        return panjang * 100000
+      elif satuan2 == "Milimeter":
+        return panjang * 1000000
       elif satuan2 == "Inci":
-        return panjang / 2.54
+        return panjang * 39370
+      else:
+        return None
+    elif satuan1 == "Hektometer":
+      if satuan2 == "Kilometer":
+        return panjang / 10
+      elif satuan2 == "Dekameter":
+        return panjang * 10
+      elif satuan2 == "Meter":
+        return panjang * 100
+      elif satuan2 == "Desimeter":
+        return panjang * 1000
+      elif satuan2 == "Sentimeter":
+        return panjang * 10000
+      elif satuan2 == "Milimeter":
+        return panjang * 100000
+      elif satuan2 == "Inci":
+        return panjang * 3937
+      else:
+        return None
+    elif satuan1 == "Dekameter":
+      if satuan2 == "Kilometer":
+        return panjang / 100
+      elif satuan2 == "Hektometer":
+        return panjang / 10
+      elif satuan2 == "Meter":
+        return panjang * 10
+      elif satuan2 == "Desimeter":
+        return panjang * 100
+      elif satuan2 == "Sentimeter":
+        return panjang * 1000
+      elif satuan2 == "Milimeter":
+        return panjang * 10000
+      elif satuan2 == "Inci":
+        return panjang * 393.7
       else:
         return None
     elif satuan1 == "Meter":
@@ -107,30 +141,64 @@ if selected == "Panjang":
         return panjang * 39.37
       else:
         return None
-    elif satuan1 == "Kilometer":
-      if satuan2 == "Hektometer":
-        return panjang * 10
+    elif satuan1 == "Desimeter":
+      if satuan2 == "Kilometer":
+        return panjang / 10000
+      elif satuan2 == "Hektometer":
+        return panjang / 1000
       elif satuan2 == "Dekameter":
-        return panjang * 100
+        return panjang / 100
       elif satuan2 == "Meter":
-        return panjang * 1000
-      elif satuan2 == "Desimeter":
-        return panjang * 10000
+        return panjang / 10
       elif satuan2 == "Sentimeter":
-        return panjang * 100000
+        return panjang * 10
       elif satuan2 == "Milimeter":
-        return panjang * 1000000
+        return panjang * 100
       elif satuan2 == "Inci":
-        return panjang * 39370
+        return panjang * 3.937
+      else:
+        return None
+    elif satuan1 == "Sentimeter":
+      if satuan2 == "Kilometer":
+        return panjang / 100000
+      elif satuan2 == "Hektometer":
+        return panjang / 10000
+      elif satuan2 == "Dekameter":
+        return panjang / 1000
+      elif satuan2 == "Meter":
+        return panjang / 100
+      elif satuan2 == "Desimeter":
+        return panjang / 10
+      elif satuan2 == "Milimeter":
+        return panjang * 10
+      elif satuan2 == "Inci":
+        return panjang / 2.54
+      else:
+        return None
+    elif satuan1 == "Milimeter":
+      if satuan2 == "Kilometer":
+        return panjang / 1000000
+      elif satuan2 == "Hektometer":
+        return panjang / 100000
+      elif satuan2 == "Dekameter":
+        return panjang / 10000
+      elif satuan2 == "Meter":
+        return panjang / 1000
+      elif satuan2 == "Desimeter":
+        return panjang / 100
+      elif satuan2 == "Sentimeter":
+        return panjang / 10
+      elif satuan2 == "Inci":
+        return panjang / 25.4
       else:
         return None
     elif satuan1 == "Inci":
       if satuan2 == "Kilometer":
         return panjang / 39370
       elif satuan2 == "Hektometer":
-        return panjang / 393.7
+        return panjang / 3937
       elif satuan2 == "Dekameter":
-        return panjang / 39.37
+        return panjang / 393.7
       elif satuan2 == "Meter":
         return panjang / 39.37
       elif satuan2 == "Desimeter":
@@ -139,74 +207,6 @@ if selected == "Panjang":
         return panjang * 2.54
       elif satuan2 == "Milimeter":
         return panjang * 25.4
-      else:
-        return None
-    elif satuan1 == "Hektometer":
-      if satuan2 == "Sentimeter":
-        return panjang * 10000
-      elif satuan2 == "Meter":
-        return panjang * 100
-      elif satuan2 == "Kilometer":
-        return panjang / 10
-      elif satuan2 == "Inci":
-        return panjang * 393.7
-      elif satuan2 == "Dekameter":
-        return panjang * 10
-      elif satuan2 == "Desimeter":
-        return panjang * 10
-      elif satuan2 == "Milimeter":
-        return panjang * 10000
-      else:
-        return None
-    elif satuan1 == "Dekameter":
-      if satuan2 == "Sentimeter":
-        return panjang * 1000
-      elif satuan2 == "Meter":
-        return panjang * 10
-      elif satuan2 == "Kilometer":
-        return panjang / 100
-      elif satuan2 == "Inci":
-        return panjang * 39.37
-      elif satuan2 == "Hektometer":
-        return panjang / 10
-      elif satuan2 == "Desimeter":
-        return panjang / 10
-      elif satuan2 == "Milimeter":
-        return panjang * 1000
-      else:
-        return None
-    elif satuan1 == "Desimeter":
-      if satuan2 == "Sentimeter":
-        return panjang * 10
-      elif satuan2 == "Meter":
-        return panjang / 10
-      elif satuan2 == "Kilometer":
-        return panjang / 10000
-      elif satuan2 == "Inci":
-        return panjang * 3.937
-      elif satuan2 == "Hektometer":
-        return panjang / 100
-      elif satuan2 == "Dekameter":
-        return panjang / 10
-      elif satuan2 == "Milimeter":
-        return panjang * 10
-      else:
-        return None
-    elif satuan1 == "Milimeter":
-      if satuan2 == "Sentimeter":
-        return panjang * 10
-      elif satuan2 == "Meter":
-        return panjang / 1000
-      elif satuan2 == "Kilometer":
-        return panjang / 1000000
-      elif satuan2 == "Inci":
-        return panjang / 25.4
-      elif satuan2 == "Hektometer":
-        return panjang / 10000
-      elif satuan2 == "Dekameter":
-        return panjang / 1000
-      elif satuan2 == "Desimeter":
-        return panjang / 10
       else:
         return None
     else:
@@ -225,37 +225,105 @@ if selected == "Panjang":
 
 
 if selected == "Berat":
-  st.title("Konversi Satuan Berat")
-  st.markdown("""
-  Aplikasi ini memungkinkan Anda untuk melakukan konversi satuan berat antara:
-  - Kilogram (Kg)
-  - Gram (G)
-  - Ton (T)
-  """)
-  # st.write(":gray[Gunakan alat ini untuk mengonversi panjang antara berbagai satuan, seperti meter, kilometer, inci, dan lainnya.]")
+  # Set konfigurasi halaman
+  # st.set_page_config(page_title="Konversi Berat", page_icon="⚖️", layout="centered")
 
-  st.image("https://i.ytimg.com/vi/RgqQzWkJrx8/maxresdefault.jpg", width=400)
+  # CSS untuk gaya kustom
+  st.markdown("""
+      <style>
+          .stApp {
+              background-color: #e8f6ff;
+          }
+          .header-title {
+              color: #1abc9c;
+              text-align: center;
+              font-family: 'Arial Black', sans-serif;
+              text-shadow: 2px 2px 4px #b3e5fc;
+          }
+          .info-text {
+              color: #34495e;
+              font-family: 'Verdana', sans-serif;
+              padding: 15px;
+              background-color: #dff9fb;
+              border: 3px solid #1abc9c;
+              border-radius: 15px;
+              box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+              margin: 20px auto;
+              max-width: 600px;
+          }
+          .info-text ul {
+              list-style-type: none;
+              padding: 0;
+          }
+          .info-text li {
+              margin: 10px 0;
+              padding: 5px 10px;
+              background-color: #1abc9c;
+              color: white;
+              border-radius: 10px;
+              font-weight: bold;
+              box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+          }
+          .stButton>button {
+              color: white;
+              background-color: #1abc9c;
+              border: none;
+              border-radius: 5px;
+              padding: 10px;
+              font-size: 16px;
+              font-weight: bold;
+              box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+          }
+          .stButton>button:hover {
+              background-color: #16a085;
+              box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+          }
+          .stNumberInput input {
+              border: 2px solid #1abc9c;
+              border-radius: 5px;
+          }
+          .stSelectbox select {
+              border: 2px solid #1abc9c;
+              border-radius: 5px;
+          }
+      </style>
+  """, unsafe_allow_html=True)
+
+  # Judul aplikasi
+  st.markdown("<h1 class='header-title'> Aplikasi Konversi Satuan Berat </h1>", unsafe_allow_html=True)
+
+  # Deskripsi aplikasi
+  st.write("""
+  <div class='info-text'>
+  Aplikasi ini memungkinkan Anda untuk melakukan konversi satuan berat antara:
+  <ul>
+  <li>Kilogram (kg)</li>
+  <li>Gram (g)</li>
+  <li>Ton (T)</li>
+  </ul>
+  Masukkan nilai berat, pilih satuan asal, dan satuan tujuan untuk melihat hasil konversinya.
+  </div>
+  """, unsafe_allow_html=True)
 
   # Fungsi konversi berat
   def konversi_berat(nilai, dari, ke):
       if dari == "Kilogram" and ke == "Gram":
-        return nilai * 1000
+          return nilai * 1000
       elif dari == "Gram" and ke == "Kilogram":
-        return nilai / 1000
+          return nilai / 1000
       elif dari == "Kilogram" and ke == "Ton":
-        return nilai / 1000
+          return nilai / 1000
       elif dari == "Ton" and ke == "Kilogram":
-        return nilai * 1000
+          return nilai * 1000
       elif dari == "Gram" and ke == "Ton":
-        return nilai / 1000000
+          return nilai / 1000000
       elif dari == "Ton" and ke == "Gram":
-        return nilai * 1000000
+          return nilai * 1000000
       else:
-        return nilai
-
+          return nilai
 
   # Input nilai
-  nilai = st.number_input("Masukkan nilai berat:", min_value=0.0)
+  nilai = st.number_input("Masukkan nilai berat:", min_value=0.0, format="%.2f")
 
   # Pilihan satuan
   satuan_dari = st.selectbox("Dari satuan:", ["Kilogram", "Gram", "Ton"])
@@ -264,7 +332,7 @@ if selected == "Berat":
   # Tombol konversi
   if st.button("Konversi"):
       hasil = konversi_berat(nilai, satuan_dari, satuan_ke)
-      st.success(f"Hasil: {hasil} {satuan_ke}")
+      st.success(f"Hasil: {hasil:.2f} {satuan_ke}")
 
 
 
@@ -290,7 +358,7 @@ if selected == "Waktu":
   """)
 
   # Input nilai waktu
-  input_value = st.number_input("Masukkan nilai waktu:", min_value=0.0, step=0.1)
+  input_value = st.number_input("Masukkan nilai waktu:", min_value=0, step=0.1)
 
   # Pilihan satuan asal dan tujuan
   st.write("### Pilih konversi waktu:")
