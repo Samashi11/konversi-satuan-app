@@ -227,7 +227,7 @@ if selected == "Panjang":
 
 if selected == "Berat":
   # Set konfigurasi halaman
-  st.set_page_config(page_title="Konversi Berat", page_icon="⚖️", layout="centered")
+  # st.set_page_config(page_title="Konversi Berat", page_icon="⚖️", layout="centered")
 
   # CSS untuk gaya kustom
   st.markdown("""
