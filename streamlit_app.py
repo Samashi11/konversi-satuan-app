@@ -3,6 +3,29 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title='Konversi Satuan App')
 
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        background: linear-gradient(90deg, #a1c4fd, #c2e9fb); /* Warna gradien biru muda */
+        animation: gradientAnimation 5s ease infinite;
+        background-size: 200% 200%; /* Memastikan animasi terlihat */
+    }
+
+    @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+st.sidebar.image("img/sttnf.png", width=200)
+st.sidebar.markdown("")
+
 # Navigasi Sidebar
 with st.sidebar:
   selected = option_menu(
@@ -319,6 +342,9 @@ if selected == "Waktu":
   # Judul aplikasi
   st.title("Konversi Satuan Waktu")
 
+  # Gambar waktu
+  st.image("img/konversi_waktu.png", width=800)
+
   # Deskripsi aplikasi
   st.write("""
   ### Deskripsi Aplikasi:
@@ -411,6 +437,7 @@ if selected == "Waktu":
 
 if selected == "Suhu":
   st.title("Konversi Satuan Suhu")
+  st.image("img/konversi_suhu.jpg", width=800)
   st.write(":gray[Aplikasi ini memungkinkan Anda mengonversi suhu antara Celsius, Fahrenheit, Kelvin, Reaumur, dan Rankine.]")
 
   import streamlit as st
