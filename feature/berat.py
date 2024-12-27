@@ -103,4 +103,4 @@ satuan_ke = st.selectbox("Ke satuan:", ["Kilogram", "Gram", "Ton"])
 # Tombol konversi
 if st.button("Konversi"):
     hasil = konversi_berat(nilai, satuan_dari, satuan_ke)
-    st.success(f"Hasil: {hasil:.2f} {satuan_ke}")
+    st.success(f"Hasil: {hasil:} {satuan_ke}")
