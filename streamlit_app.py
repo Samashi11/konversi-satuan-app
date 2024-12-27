@@ -1,13 +1,15 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+from PIL import Image
 
 st.set_page_config(page_title='Konversi Satuan App')
 
-home = st.Page("./feature/home.py", title="Home")
-berat = st.Page("./feature/berat.py", title="berat")
-panjang = st.Page("./feature/panjang.py", title="panjang")
-suhu = st.Page("./feature/suhu.py", title="suhu")
-waktu = st.Page("./feature/waktu.py", title="waktu")
+# home = Image.open('home.png')
+
+home = st.Page("./feature/home.py", title="Home", icon=":material/home:")
+panjang = st.Page("./feature/panjang.py", title="Panjang", icon=":material/straighten:")
+berat = st.Page("./feature/berat.py", title="Berat", icon=":material/weight:")
+waktu = st.Page("./feature/waktu.py", title="Waktu", icon=":material/hourglass_empty:")
+suhu = st.Page("./feature/suhu.py", title="Suhu", icon=":material/device_thermostat:")
 
 # Navigasi
 pg = st.navigation(

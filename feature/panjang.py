@@ -5,11 +5,13 @@ st.write(":gray[Gunakan alat ini untuk mengonversi panjang antara berbagai satua
 
 st.image("https://www.wahanaedukasi.latifaba.com/public/uploads/blog/blog_240201090159_satuan-panjang-adalah-tangga-satuan-cara-hitung-dan-contoh-soal.png", width=400)
 
+# Variabel
 panjang = st.number_input("Masukkan Panjang :",0)
 satuan1 = st.selectbox("Dari Satuan :",["Sentimeter","Meter","Kilometer","Hektometer","Dekameter","Desimeter","Inci","Milimeter"])
 satuan2 = st.selectbox("Ke Satuan :",["Sentimeter","Meter","Kilometer","Hektometer","Dekameter","Desimeter","Inci","Milimeter"])
 konversi = st.button("Konversi")
 
+# Fungsi
 def konversi_panjang(panjang, satuan1, satuan2):
   if satuan1 == "Kilometer":
     if satuan2 == "Hektometer":
@@ -150,7 +152,7 @@ def konversi_panjang(panjang, satuan1, satuan2):
   else:
     return None
 
-
+# If Else
 if konversi:
   hasil = konversi_panjang(panjang, satuan1, satuan2)
   if hasil is not None:

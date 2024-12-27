@@ -1,63 +1,63 @@
 import streamlit as st
 
 st.markdown("""
-      <style>
-          .stApp {
-              background-color: #e8f6ff;
-          }
-          .header-title {
-              color: #1abc9c;
-              text-align: center;
-              font-family: 'Arial Black', sans-serif;
-              text-shadow: 2px 2px 4px #b3e5fc;
-          }
-          .info-text {
-              color: #34495e;
-              font-family: 'Verdana', sans-serif;
-              padding: 15px;
-              background-color: #dff9fb;
-              border: 3px solid #1abc9c;
-              border-radius: 15px;
-              box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
-              margin: 20px auto;
-              max-width: 600px;
-          }
-          .info-text ul {
-              list-style-type: none;
-              padding: 0;
-          }
-          .info-text li {
-              margin: 10px 0;
-              padding: 5px 10px;
-              background-color: #1abc9c;
-              color: white;
-              border-radius: 10px;
-              font-weight: bold;
-              box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-          }
-          .stButton>button {
-              color: white;
-              background-color: #1abc9c;
-              border: none;
-              border-radius: 5px;
-              padding: 10px;
-              font-size: 16px;
-              font-weight: bold;
-              box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-          }
-          .stButton>button:hover {
-              background-color: #16a085;
-              box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-          }
-          .stNumberInput input {
-              border: 2px solid #1abc9c;
-              border-radius: 5px;
-          }
-          .stSelectbox select {
-              border: 2px solid #1abc9c;
-              border-radius: 5px;
-          }
-      </style>
+    <style>
+        .stApp {
+            background-color: #e8f6ff;
+        }
+        .header-title {
+            color: #1abc9c;
+            text-align: center;
+            font-family: 'Arial Black', sans-serif;
+            text-shadow: 2px 2px 4px #b3e5fc;
+        }
+        .info-text {
+            color: #34495e;
+            font-family: 'Verdana', sans-serif;
+            padding: 15px;
+            background-color: #dff9fb;
+            border: 3px solid #1abc9c;
+            border-radius: 15px;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .info-text ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .info-text li {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background-color: #1abc9c;
+            color: white;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .stButton>button {
+            color: white;
+            background-color: #1abc9c;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .stButton>button:hover {
+            background-color: #16a085;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+        .stNumberInput input {
+            border: 2px solid #1abc9c;
+            border-radius: 5px;
+        }
+        .stSelectbox select {
+            border: 2px solid #1abc9c;
+            border-radius: 5px;
+        }
+    </style>
   """, unsafe_allow_html=True)
 
 # Judul aplikasi

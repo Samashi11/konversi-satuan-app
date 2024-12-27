@@ -20,6 +20,7 @@ icon = ["\U0001F4CF","\u2696\ufe0f","\u23F3","\U0001F321\ufe0f"]
 title1 = ["Panjang","Berat","Waktu","Suhu"]
 row1 = st.columns(4)
 
+# Looop For
 for i, col in enumerate(row1):
   tile = col.container(height=180)
   tile.title(icon[i])
