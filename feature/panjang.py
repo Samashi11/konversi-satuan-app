@@ -156,6 +156,6 @@ def konversi_panjang(panjang, satuan1, satuan2):
 if konversi:
   hasil = konversi_panjang(panjang, satuan1, satuan2)
   if hasil is not None:
-    st.write("Hasil Konversi : ", f"**{hasil}**", satuan2)
+    st.write("Hasil Konversi : ", f"**{hasil:2f}**", satuan2)
   else:
     st.write("Hasil Konversi Tidak Valid")
