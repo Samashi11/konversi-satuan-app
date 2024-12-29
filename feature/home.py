@@ -1,19 +1,19 @@
 import streamlit as st
 
-page_bg_img = '''
-<style>
-*{
-  font-color: white;
-}
-.stAppHeader{
-  opacity: 50;
-}
-.stApp {
-background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=2800");
-background-size: cover;
-}
-</style>
-'''
+# page_bg_img = '''
+# <style>
+# *{
+#   font-color: white;
+# }
+# .stAppHeader{
+#   opacity: 50;
+# }
+# .stApp {
+# background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=2800");
+# background-size: cover;
+# }
+# </style>
+# '''
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
