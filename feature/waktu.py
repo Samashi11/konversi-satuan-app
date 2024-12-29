@@ -20,7 +20,7 @@ Berikut langkah-langkah menggunakan aplikasi ini:
 """)
 
 # Input nilai waktu
-input_value = st.number_input("Masukkan nilai waktu:", min_value=0, step=0.1)
+input_value = st.number_input("Masukkan nilai waktu:", 0)
 
 # Pilihan satuan asal dan tujuan
 st.write("### Pilih konversi waktu:")
