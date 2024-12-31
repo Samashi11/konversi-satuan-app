@@ -3,6 +3,10 @@ import streamlit as st
 # Menambahkan CSS untuk gaya aplikasi
 st.markdown("""
     <style>
+        .stAppHeader, .stAppFooter {
+            opacity: 0;
+        }
+            
         .stApp {
             background-color: #fff5f5;
         }
@@ -13,6 +17,7 @@ st.markdown("""
             font-weight: bold;
             color: #e63946;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(42, 157, 244, 0.3)
         }
         .subheader-title {
             text-align: center;
@@ -56,6 +61,9 @@ st.markdown("""
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
             color: #e63946;
+        }
+        [data-testid="stBaseButton-headerNoPadding"] {
+        color: #e63946;
         }
     </style>
 """, unsafe_allow_html=True)

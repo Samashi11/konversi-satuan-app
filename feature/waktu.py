@@ -1,8 +1,12 @@
 import streamlit as st
+import time
 
 # Menambahkan gaya CSS dengan warna biru
 st.markdown("""
       <style>
+        .stAppHeader, .stAppFooter {
+        opacity: 0;
+        }
           .stApp {
               background-color: #f4faff;
           }
@@ -48,7 +52,7 @@ st.markdown("""
               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           }
           .stButton>button:hover {
-              background-color: #1b7fcc;
+              background-color: #C6E7FF;
               box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
               transform: translateY(-2px);
           }
@@ -64,9 +68,11 @@ st.markdown("""
               border-color: #1b7fcc;
               box-shadow: 0 0 5px rgba(42, 157, 244, 0.4);
           }
+            [data-testid="stBaseButton-headerNoPadding"] {
+            color: #2a9df4;
+          }
       </style>
   """, unsafe_allow_html=True)
-
 
 # Judul aplikasi
 st.markdown("<h1 class='header-title'> Aplikasi Konversi Satuan Waktu </h1>", unsafe_allow_html=True)
@@ -117,12 +123,14 @@ satuan_dari = st.selectbox("Dari satuan:", ["Jam", "Menit", "Detik", "Milidetik"
 satuan_ke = st.selectbox("Ke satuan:", ["Jam", "Menit", "Detik", "Milidetik", "Mikrodetik"])
 
 # Tombol konversi
-# Tombol konversi
 if st.button("Konversi"):
-    # Membuat objek TimeConverter
-    converter = TimeConverter(nilai, satuan_dari, satuan_ke)
-    # Menghitung hasil konversi
-    hasil = converter.convert()
+    with st.spinner("Sedang mengonversi ... Sabar yaa :)"):
+        # Simulasi proses loading
+        time.sleep(2)  # Durasi spinner, bisa disesuaikan
+        # Membuat objek TimeConverter
+        converter = TimeConverter(nilai, satuan_dari, satuan_ke)
+        # Menghitung hasil konversi
+        hasil = converter.convert()
     # Menampilkan hasil dengan gaya khusus
     st.markdown(f"""
         <div style="

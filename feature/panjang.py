@@ -1,8 +1,12 @@
 import streamlit as st
+import time
 
 # Menambahkan gaya CSS dengan warna oranye
 st.markdown("""
       <style>
+          .stAppHeader, .stAppFooter {
+           opacity: 0;
+        }
           .stApp {
               background-color: #fff7e6;
           }
@@ -64,6 +68,9 @@ st.markdown("""
               border-color: #e66900;
               box-shadow: 0 0 5px rgba(255, 127, 14, 0.4);
           }
+            [data-testid="stBaseButton-headerNoPadding"] {
+            color: #ff7f0e;
+          }
       </style>
   """, unsafe_allow_html=True)
 
@@ -122,10 +129,12 @@ satuan_ke = st.selectbox("Ke Satuan :", ["Sentimeter", "Meter", "Kilometer", "He
 
 # Tombol konversi
 if st.button("Konversi"):
-    # Membuat objek LengthConverter
-    converter = LengthConverter(nilai, satuan_dari, satuan_ke)
-    # Menghitung hasil konversi
-    hasil = converter.convert()
+    with st.spinner("Mengonversi... Mohon tunggu sebentar"):
+        time.sleep(2)  # Simulasi pemrosesan selama 2 detik
+        # Membuat objek LengthConverter
+        converter = LengthConverter(nilai, satuan_dari, satuan_ke)
+        # Menghitung hasil konversi
+        hasil = converter.convert()
     # Menampilkan hasil dengan gaya khusus
     st.markdown(f"""
         <div style="

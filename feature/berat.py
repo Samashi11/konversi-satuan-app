@@ -1,7 +1,12 @@
 import streamlit as st
+import time
 
+# Tambahkan gaya kustom
 st.markdown("""
       <style>
+         .stAppHeader, .stAppFooter {
+            opacity: 0;
+        }
           .stApp {
               background-color: #e8f6ff;
           }
@@ -57,6 +62,9 @@ st.markdown("""
               border: 2px solid #1abc9c;
               border-radius: 5px;
           }
+            [data-testid="stBaseButton-headerNoPadding"] {
+            color: #1abc9c;
+          }
       </style>
   """, unsafe_allow_html=True)
 
@@ -77,7 +85,7 @@ Masukkan nilai berat, pilih satuan asal, dan satuan tujuan untuk melihat hasil k
 """, unsafe_allow_html=True)
 
 # Input nilai
-nilai = st.number_input("Masukkan nilai berat:", 0)
+nilai = st.number_input("Masukkan nilai berat:", value=0.0, min_value=0.0)
 
 # Pilihan satuan
 satuan_dari = st.selectbox("Dari satuan:", ["Kilogram", "Gram", "Ton"])
@@ -94,13 +102,18 @@ def konversi_berat(nilai, dari, ke):
     elif dari == "Ton" and ke == "Kilogram":
         return nilai * 1000
     elif dari == "Gram" and ke == "Ton":
-        return nilai / 1000000
+        return nilai / 1_000_000
     elif dari == "Ton" and ke == "Gram":
-        return nilai * 1000000
+        return nilai * 1_000_000
     else:
         return nilai
 
 # Tombol konversi
 if st.button("Konversi"):
+    with st.spinner("Mengonversi..."):
+        time.sleep(2)  # Simulasi proses
     hasil = konversi_berat(nilai, satuan_dari, satuan_ke)
-    st.success(f"Hasil: {hasil:.2f} {satuan_ke}")
+    st.markdown(
+        f"<div class='info-text'><strong>Hasil:</strong> {nilai} {satuan_dari} sama dengan <strong>{hasil:.2f} {satuan_ke}</strong>.</div>",
+        unsafe_allow_html=True,
+    )

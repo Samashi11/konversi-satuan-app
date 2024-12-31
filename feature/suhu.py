@@ -1,7 +1,11 @@
 import streamlit as st
+import time  # Menambahkan modul time untuk menggunakan sleep
 
 st.markdown("""
     <style>
+        .stAppHeader, .stAppFooter {
+            opacity: 0;
+        }
         .stApp {
             background-color: #f4e1ff; /* Latar belakang ungu muda */
         }
@@ -61,6 +65,9 @@ st.markdown("""
             color: #4b0082;
             font-family: 'Verdana', sans-serif;
             font-weight: bold;
+        }
+        [data-testid="stBaseButton-headerNoPadding"] {
+        color: #6a0dad;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -124,15 +131,19 @@ def konversi_suhu(nilai, dari, ke):
 if mode == "Konversi ke unit tertentu":
     satuan_ke = st.selectbox("Ke satuan:", ["Celsius", "Fahrenheit", "Kelvin", "Reaumur", "Rankine"])
     if st.button("Konversi"):
-        hasil = konversi_suhu(nilai, satuan_dari, satuan_ke)
-        st.success(f"Hasil: {hasil:.2f} {satuan_ke}")
+        with st.spinner("Menghitung konversi..."):
+            time.sleep(2)  # Menambahkan jeda 2 detik untuk simulasi
+            hasil = konversi_suhu(nilai, satuan_dari, satuan_ke)
+            st.success(f"Hasil: {hasil:.2f} {satuan_ke}")
 elif mode == "Konversi ke semua unit":
     if st.button("Konversi Semua"):
-        satuan_ke_semua = ["Celsius", "Fahrenheit", "Kelvin", "Reaumur", "Rankine"]
-        hasil_semua = {}
-        for satuan_ke in satuan_ke_semua:
-            if satuan_ke != satuan_dari:
-                hasil_semua[satuan_ke] = konversi_suhu(nilai, satuan_dari, satuan_ke)
-        st.write("Hasil konversi:")
-        for satuan, hasil in hasil_semua.items():
-            st.write(f"- {satuan}: {hasil:.2f}")
+        with st.spinner("Menghitung konversi ke semua unit..."):
+            time.sleep(2)  # Menambahkan jeda 2 detik untuk simulasi
+            satuan_ke_semua = ["Celsius", "Fahrenheit", "Kelvin", "Reaumur", "Rankine"]
+            hasil_semua = {}
+            for satuan_ke in satuan_ke_semua:
+                if satuan_ke != satuan_dari:
+                    hasil_semua[satuan_ke] = konversi_suhu(nilai, satuan_dari, satuan_ke)
+            st.write("Hasil konversi:")
+            for satuan, hasil in hasil_semua.items():
+                st.write(f"- {satuan}: {hasil:.2f}")
