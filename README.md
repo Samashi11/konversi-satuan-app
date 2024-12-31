@@ -1,6 +1,6 @@
 # 🎈 Aplikasi Konversi Satuan
 
-A simple Streamlit app template for you to modify!
+alat digital yang dirancang untuk memudahkan pengguna dalam mengonversi berbagai jenis satuan dengan cepat dan akurat.
 
 ![home](streamlit.png)
 
