@@ -27,7 +27,7 @@ A simple Streamlit app template for you to modify!
    $ streamlit run streamlit_app.py
    ```
 
-## Contact
+## Contact Developer
 
 Connect with me! Feel free to reach out for collaboration, job opportunities, or just to say hello.
 
