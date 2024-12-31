@@ -1,6 +1,6 @@
-# 🎈 Aplikasi Konversi Satuan
+# 🎈 Unit Conversion Application
 
-alat digital yang dirancang untuk memudahkan pengguna dalam mengonversi berbagai jenis satuan dengan cepat dan akurat.
+a digital tool designed to make it easier for users to convert various types of units quickly and accurately.
 
 ![home](streamlit.png)
 
