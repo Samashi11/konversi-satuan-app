@@ -33,5 +33,5 @@ Connect with me! Feel free to reach out for collaboration, job opportunities, or
 
 - **Email:** wahyuyassin@gmail.com
 - **Email:** maulashidqic10@gmail.com
-- **Email:** @gmail.com
-- **Email:** @gmail.com
+- **Email:** varrelnf@gmail.com
+- **Email:** ferdypratama5387@gmail.com
