@@ -6,7 +6,6 @@ st.markdown("""
         .stAppHeader, .stAppFooter {
             opacity: 0;
         }
-            
         .stApp {
             background-color: #fff5f5;
         }

@@ -36,13 +36,14 @@ panjang = st.Page("./feature/panjang.py", title="Panjang", icon=":material/strai
 berat = st.Page("./feature/berat.py", title="Berat", icon=":material/weight:")
 waktu = st.Page("./feature/waktu.py", title="Waktu", icon=":material/hourglass_empty:")
 suhu = st.Page("./feature/suhu.py", title="Suhu", icon=":material/device_thermostat:")
+team = st.Page("./Tentang/team.py", title="Team", icon=":material/people:")
 
 # Navigasi
 pg = st.navigation(
   {
     "Menu Utama": [home],
     "Konversi": [panjang, berat, waktu, suhu],
-    
+    "Tentang Kami": [team],
   }
 )
 
