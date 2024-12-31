@@ -19,7 +19,15 @@ page_bg_style = """
     }
     [data-testid="stSidebar"] {
         background-color: #074799; /* Warna biru muda transparan */
-        color: black; /* Warna teks sidebar */
+    }
+    [data-testid="stNavSectionHeader"] {
+        color: #ffff; /* Warna teks sidebar */
+    }
+    [data-testid="stSidebarNavLink"] span {
+        color: #ffff; /* Warna teks sidebar */
+    }
+    [data-testid="stSidebarNavLink"] span span {
+        color: #ffff!important; /* Warna teks sidebar */
     }
     [data-testid="stSidebarCollapseButton"] {
         color: white; /* Warna teks sidebar */
