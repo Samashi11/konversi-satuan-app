@@ -1,161 +1,155 @@
 import streamlit as st
+import time
 
-st.title("Konversi Satuan Panjang")
-st.write(":gray[Gunakan alat ini untuk mengonversi panjang antara berbagai satuan, seperti meter, kilometer, inci, dan lainnya.]")
+# Menambahkan gaya CSS dengan warna oranye
+st.markdown("""
+      <style>
+          .stAppHeader, .stAppFooter {
+           opacity: 0;
+        }
+          .stApp {
+              background-color: #fff7e6;
+          }
+          .header-title {
+              color: #ff7f0e;
+              text-align: center;
+              font-family: 'Poppins', sans-serif;
+              font-size: 36px;
+              font-weight: bold;
+              text-shadow: 2px 2px 4px rgba(255, 127, 14, 0.3);
+          }
+          .info-text {
+              color: #4d2800;
+              font-family: 'Roboto', sans-serif;
+              padding: 20px;
+              background-color: #ffe6cc;
+              border-left: 6px solid #ff7f0e;
+              border-radius: 10px;
+              margin: 20px auto;
+              max-width: 650px;
+              line-height: 1.6;
+          }
+          .info-text ul {
+              list-style-type: square;
+              padding-left: 20px;
+          }
+          .info-text li {
+              margin: 8px 0;
+              padding: 5px;
+              color: #b35900;
+              font-weight: bold;
+          }
+          .stButton>button {
+              color: white;
+              background-color: #ff7f0e;
+              border: none;
+              border-radius: 8px;
+              padding: 12px 20px;
+              font-size: 18px;
+              font-weight: bold;
+              font-family: 'Poppins', sans-serif;
+              transition: all 0.3s ease-in-out;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          }
+          .stButton>button:hover {
+              background-color: #e66900;
+              box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+              transform: translateY(-2px);
+          }
+          .stNumberInput input, .stSelectbox select {
+              border: 2px solid #ff7f0e;
+              border-radius: 5px;
+              padding: 8px;
+              font-size: 16px;
+              font-family: 'Roboto', sans-serif;
+          }
+          .stNumberInput input:focus, .stSelectbox select:focus {
+              outline: none;
+              border-color: #e66900;
+              box-shadow: 0 0 5px rgba(255, 127, 14, 0.4);
+          }
+            [data-testid="stBaseButton-headerNoPadding"] {
+            color: #ff7f0e;
+          }
+      </style>
+  """, unsafe_allow_html=True)
 
-st.image("https://www.wahanaedukasi.latifaba.com/public/uploads/blog/blog_240201090159_satuan-panjang-adalah-tangga-satuan-cara-hitung-dan-contoh-soal.png", width=400)
+# Judul aplikasi
+st.markdown("<h1 class='header-title'> Aplikasi Konversi Satuan Panjang </h1>", unsafe_allow_html=True)
 
-# Variabel
-panjang = st.number_input("Masukkan Panjang :",0)
-satuan1 = st.selectbox("Dari Satuan :",["Sentimeter","Meter","Kilometer","Hektometer","Dekameter","Desimeter","Inci","Milimeter"])
-satuan2 = st.selectbox("Ke Satuan :",["Sentimeter","Meter","Kilometer","Hektometer","Dekameter","Desimeter","Inci","Milimeter"])
-konversi = st.button("Konversi")
+# Deskripsi aplikasi
+st.write("""
+<div class='info-text'>
+Aplikasi ini memungkinkan Anda untuk melakukan konversi satuan panjang antara:
+<ul>
+<li>Kilometer</li>
+<li>Meter</li>
+<li>Sentimeter</li>
+<li>Milimeter</li>
+<li>Inci</li>
+</ul>
+Masukkan nilai panjang, pilih satuan asal, dan satuan tujuan untuk melihat hasil konversinya.
+</div>
+""", unsafe_allow_html=True)
 
-# Fungsi
-def konversi_panjang(panjang, satuan1, satuan2):
-  if satuan1 == "Kilometer":
-    if satuan2 == "Hektometer":
-      return panjang * 10
-    elif satuan2 == "Dekameter":
-      return panjang * 100
-    elif satuan2 == "Meter":
-      return panjang * 1000
-    elif satuan2 == "Desimeter":
-      return panjang * 10000
-    elif satuan2 == "Sentimeter":
-      return panjang * 100000
-    elif satuan2 == "Milimeter":
-      return panjang * 1000000
-    elif satuan2 == "Inci":
-      return panjang * 39370
-    else:
-      return None
-  elif satuan1 == "Hektometer":
-    if satuan2 == "Kilometer":
-      return panjang / 10
-    elif satuan2 == "Dekameter":
-      return panjang * 10
-    elif satuan2 == "Meter":
-      return panjang * 100
-    elif satuan2 == "Desimeter":
-      return panjang * 1000
-    elif satuan2 == "Sentimeter":
-      return panjang * 10000
-    elif satuan2 == "Milimeter":
-      return panjang * 100000
-    elif satuan2 == "Inci":
-      return panjang * 3937
-    else:
-      return None
-  elif satuan1 == "Dekameter":
-    if satuan2 == "Kilometer":
-      return panjang / 100
-    elif satuan2 == "Hektometer":
-      return panjang / 10
-    elif satuan2 == "Meter":
-      return panjang * 10
-    elif satuan2 == "Desimeter":
-      return panjang * 100
-    elif satuan2 == "Sentimeter":
-      return panjang * 1000
-    elif satuan2 == "Milimeter":
-      return panjang * 10000
-    elif satuan2 == "Inci":
-      return panjang * 393.7
-    else:
-      return None
-  elif satuan1 == "Meter":
-    if satuan2 == "Kilometer":
-      return panjang / 1000
-    elif satuan2 == "Hektometer":
-      return panjang / 100
-    elif satuan2 == "Dekameter":
-      return panjang / 10
-    elif satuan2 == "Desimeter":
-      return panjang * 10
-    elif satuan2 == "Sentimeter":
-      return panjang * 100
-    elif satuan2 == "Milimeter":
-      return panjang * 1000
-    elif satuan2 == "Inci":
-      return panjang * 39.37
-    else:
-      return None
-  elif satuan1 == "Desimeter":
-    if satuan2 == "Kilometer":
-      return panjang / 10000
-    elif satuan2 == "Hektometer":
-      return panjang / 1000
-    elif satuan2 == "Dekameter":
-      return panjang / 100
-    elif satuan2 == "Meter":
-      return panjang / 10
-    elif satuan2 == "Sentimeter":
-      return panjang * 10
-    elif satuan2 == "Milimeter":
-      return panjang * 100
-    elif satuan2 == "Inci":
-      return panjang * 3.937
-    else:
-      return None
-  elif satuan1 == "Sentimeter":
-    if satuan2 == "Kilometer":
-      return panjang / 100000
-    elif satuan2 == "Hektometer":
-      return panjang / 10000
-    elif satuan2 == "Dekameter":
-      return panjang / 1000
-    elif satuan2 == "Meter":
-      return panjang / 100
-    elif satuan2 == "Desimeter":
-      return panjang / 10
-    elif satuan2 == "Milimeter":
-      return panjang * 10
-    elif satuan2 == "Inci":
-      return panjang / 2.54
-    else:
-      return None
-  elif satuan1 == "Milimeter":
-    if satuan2 == "Kilometer":
-      return panjang / 1000000
-    elif satuan2 == "Hektometer":
-      return panjang / 100000
-    elif satuan2 == "Dekameter":
-      return panjang / 10000
-    elif satuan2 == "Meter":
-      return panjang / 1000
-    elif satuan2 == "Desimeter":
-      return panjang / 100
-    elif satuan2 == "Sentimeter":
-      return panjang / 10
-    elif satuan2 == "Inci":
-      return panjang / 25.4
-    else:
-      return None
-  elif satuan1 == "Inci":
-    if satuan2 == "Kilometer":
-      return panjang / 39370
-    elif satuan2 == "Hektometer":
-      return panjang / 3937
-    elif satuan2 == "Dekameter":
-      return panjang / 393.7
-    elif satuan2 == "Meter":
-      return panjang / 39.37
-    elif satuan2 == "Desimeter":
-      return panjang / 3.937
-    elif satuan2 == "Sentimeter":
-      return panjang * 2.54
-    elif satuan2 == "Milimeter":
-      return panjang * 25.4
-    else:
-      return None
-  else:
-    return None
+# Definisi kelas untuk konversi panjang
+class LengthConverter:
+    # Faktor konversi antar satuan panjang (ke meter)
+    conversion_factors = {
+          "Kilometer": 1000,
+          "Hektometer": 100,
+          "Dekameter": 10,
+          "Meter": 1,
+          "Desimeter": 0.1,
+          "Sentimeter": 0.01,
+          "Milimeter": 0.001,
+          "Inci": 0.0254,
+      }
 
-# If Else
-if konversi:
-  hasil = konversi_panjang(panjang, satuan1, satuan2)
-  if hasil is not None:
-    st.write("Hasil Konversi : ", f"**{hasil:.2f}**", satuan2)
-  else:
-    st.write("Hasil Konversi Tidak Valid")
+
+    def __init__(self, value, from_unit, to_unit):
+        self.value = value
+        self.from_unit = from_unit
+        self.to_unit = to_unit
+
+    def convert(self):
+        # Konversi ke meter
+        value_in_meters = self.value * self.conversion_factors[self.from_unit]
+        # Konversi dari meter ke satuan tujuan
+        result = value_in_meters / self.conversion_factors[self.to_unit]
+        return result
+
+# Input nilai
+nilai = st.number_input("Masukkan nilai panjang:", 0.0)
+
+# Pilihan satuan
+satuan_dari = st.selectbox("Dari Satuan :", ["Sentimeter", "Meter", "Kilometer", "Hektometer", "Dekameter", "Desimeter", "Inci", "Milimeter"])
+satuan_ke = st.selectbox("Ke Satuan :", ["Sentimeter", "Meter", "Kilometer", "Hektometer", "Dekameter", "Desimeter", "Inci", "Milimeter"])
+
+
+# Tombol konversi
+if st.button("Konversi"):
+    with st.spinner("Mengonversi... Mohon tunggu sebentar"):
+        time.sleep(2)  # Simulasi pemrosesan selama 2 detik
+        # Membuat objek LengthConverter
+        converter = LengthConverter(nilai, satuan_dari, satuan_ke)
+        # Menghitung hasil konversi
+        hasil = converter.convert()
+    # Menampilkan hasil dengan gaya khusus
+    st.markdown(f"""
+        <div style="
+            padding: 15px;
+            margin-top: 20px;
+            background-color: #ffe6cc;
+            border: 2px solid #ff7f0e;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            color: #b35900;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        ">
+            🎉 Hasil Konversi: <span style="color: #ff7f0e;">{hasil:.2f} {satuan_ke}</span>
+        </div>
+    """, unsafe_allow_html=True)
