@@ -1,6 +1,7 @@
 # 🎈 Blank app template
 
 A simple Streamlit app template for you to modify!
+
 ![home](streamlit.png)
 
 ## Table of Features
