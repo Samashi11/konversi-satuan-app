@@ -1,4 +1,4 @@
-# 🎈 Blank app template
+# 🎈 Aplikasi Konversi Satuan
 
 A simple Streamlit app template for you to modify!
 
@@ -26,3 +26,12 @@ A simple Streamlit app template for you to modify!
    ```
    $ streamlit run streamlit_app.py
    ```
+
+## Contact
+
+Connect with me! Feel free to reach out for collaboration, job opportunities, or just to say hello.
+
+- **Email:** wahyuyassin@gmail.com
+- **Email:** maulashidqic10@gmail.com
+- **Email:** @gmail.com
+- **Email:** @gmail.com
